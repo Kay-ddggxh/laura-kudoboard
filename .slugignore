@@ -1,8 +1,0 @@
-*.md
-tests/
-docs/
-.env
-node_modules/
-.git/
-venv/
-.pytest_cache/
