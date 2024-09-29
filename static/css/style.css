@@ -97,6 +97,7 @@ main::before {
 }
 
 /* post container */
+
 .image-container {
     max-width: 100%;
     overflow: hidden;
