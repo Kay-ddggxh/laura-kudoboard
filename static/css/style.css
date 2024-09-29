@@ -99,17 +99,10 @@ main::before {
 /* post container */
 .image-container {
     max-width: 100%;
-    max-height: 150px;
     overflow: hidden;
     display: flex;
     justify-content: center;
     align-items: center;
-}
-
-.image-container img {
-    width: auto;
-    height: 100%;
-    object-fit: cover;
 }
 
 .card {
