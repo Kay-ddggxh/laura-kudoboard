@@ -53,6 +53,10 @@ h2 {
 
 /* board styling */
 
+main {
+    padding: 50px 20px;
+}
+
 main::before {
     content: "";
     background-image: url(../images/wp5528871-poop-emoji-phone-wallpapers.jpg);
@@ -96,25 +100,34 @@ main::before {
     color: #a18cd1;
 }
 
-/* post container */
 
-.image-container {
-    max-width: 100%;
-    overflow: hidden;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+/* post container - masonry layout */
+
+.post-container {
+    column-count: 4;
+  column-gap: 10px;
 }
 
-.card {
-    transition: transform 0.3s;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.6);
-    border-radius: 8px;
+.card-custom {
+    margin: 0;
+    display: grid;
+    grid-template-rows: 1fr auto;
+    margin-bottom: 10px;
+    break-inside: avoid;
 }
 
-.card:hover {
-    transform: scale(1.1);
+.card-custom img {
+    grid-row: 1 / -1;
+  grid-column: 1;
 }
+
+.card-body-text {
+    grid-row: 3;
+  grid-column: 1;
+  justify-self: start;
+  padding: 1em .5em;
+}
+
 
 .copy {
     max-width: 20px;
@@ -122,3 +135,27 @@ main::before {
     color: #8d72cd;
     text-align: center;
 }
+
+
+/*  MEDIA QUERIES */
+
+/* post container */
+
+@media (max-width: 970px) {
+    .post-container {
+        column-count: 3;
+    }
+}
+
+@media (max-width: 540px) {
+    .post-container {
+        column-count: 2;
+    }
+}
+
+@media (max-width: 420px) {
+    .post-container {
+        column-count: 1;
+    }
+}
+
